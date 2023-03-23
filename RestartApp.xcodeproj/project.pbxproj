@@ -17,6 +17,7 @@
 		F512671E29CB8C9F0015CB28 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F512671D29CB8C9F0015CB28 /* HomeView.swift */; };
 		F512672029CB99DF0015CB28 /* CircleGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F512671F29CB99DF0015CB28 /* CircleGroupView.swift */; };
 		F56A090429CC5A8B00C7906A /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A090329CC5A8B00C7906A /* AudioPlayer.swift */; };
+		F56A090729CC61C800C7906A /* QuoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A090629CC61C800C7906A /* QuoteData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F512671D29CB8C9F0015CB28 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F512671F29CB99DF0015CB28 /* CircleGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGroupView.swift; sourceTree = "<group>"; };
 		F56A090329CC5A8B00C7906A /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		F56A090629CC61C800C7906A /* QuoteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				F512671829CB8AA50015CB28 /* Views */,
 				F512671629CB89F70015CB28 /* Sounds */,
 				F512671729CB8A6A0015CB28 /* Screens */,
+				F56A090529CC61A700C7906A /* Data */,
 				F512670A29CB882C0015CB28 /* Preview Content */,
 			);
 			path = RestartApp;
@@ -117,6 +120,14 @@
 				F56A090329CC5A8B00C7906A /* AudioPlayer.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F56A090529CC61A700C7906A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F56A090629CC61C800C7906A /* QuoteData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 				F512671E29CB8C9F0015CB28 /* HomeView.swift in Sources */,
 				F512670729CB882B0015CB28 /* ContentView.swift in Sources */,
 				F512670529CB882B0015CB28 /* RestartAppApp.swift in Sources */,
+				F56A090729CC61C800C7906A /* QuoteData.swift in Sources */,
 				F56A090429CC5A8B00C7906A /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

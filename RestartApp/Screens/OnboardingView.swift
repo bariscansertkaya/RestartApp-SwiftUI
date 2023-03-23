@@ -19,8 +19,10 @@ struct OnboardingView: View {
     @State private var imageOffset: CGSize = .zero
     @State private var indicatorOpacity: Double = 1
     @State private var textTitle:String = "Paylaş."
+    @State private var quoteText:String = "Deneme"
     
     let hapticFeedback = UINotificationFeedbackGenerator()
+    let quotes: [QuoteItem] = testData
     
     var body: some View {
         ZStack {
@@ -39,7 +41,7 @@ struct OnboardingView: View {
                         //.id(textTitle)
                         .padding()
                     
-                    Text("Bir mum, diğer mumu tutuşturmakla ışığından bir şey kaybetmez.")
+                    Text(quoteText)
                         .font(.title3)
                         .fontWeight(.light)
                         .foregroundColor(.white)
@@ -169,6 +171,7 @@ struct OnboardingView: View {
         } // ZSTACK
         .onAppear(perform: {
             isAnimating = true
+            quoteText = quotes.randomElement()!.quote
         })
     }
 }

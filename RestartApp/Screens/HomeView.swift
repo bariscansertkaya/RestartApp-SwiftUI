@@ -10,7 +10,9 @@ import SwiftUI
 struct HomeView: View {
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = false
     @State private var isAnimating: Bool = false
+    @State private var quoteText: String = "Deneme"
     let hapticFeedback = UINotificationFeedbackGenerator()
+    var quotes: [QuoteItem] = testData
     
     var body: some View {
         ZStack {
@@ -35,7 +37,7 @@ struct HomeView: View {
                         )
                 }
                 //Center
-                Text("Kalp deniz, dil kıyıdır. Denizde ne varsa kıyıya o vurur.")
+                Text(quoteText)
                     .font(.title3)
                     .fontWeight(.light)
                     .foregroundColor(Color("ColorBlue"))
@@ -62,6 +64,7 @@ struct HomeView: View {
                 .padding()
             }
             .onAppear {
+                quoteText = quotes.randomElement()!.quote
                 DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
                     isAnimating = true
                 })
