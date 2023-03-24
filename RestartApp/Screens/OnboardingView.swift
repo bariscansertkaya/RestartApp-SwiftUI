@@ -19,7 +19,7 @@ struct OnboardingView: View {
     @State private var imageOffset: CGSize = .zero
     @State private var indicatorOpacity: Double = 1
     @State private var textTitle:String = "Paylaş."
-    @State private var quoteText:String = "Deneme"
+    @State private var quoteText:String = ""
     
     let hapticFeedback = UINotificationFeedbackGenerator()
     let quotes: [QuoteItem] = testData
@@ -91,7 +91,7 @@ struct OnboardingView: View {
                     Image(systemName: "arrow.left.and.right.circle")
                         .font(.system(size: 50,weight: .ultraLight))
                         .foregroundColor(.white)
-                        .offset(y: 30)
+                        .offset(y: 40)
                         .opacity(isAnimating ? 1 : 0)
                         .opacity(indicatorOpacity)
                         .animation(.easeOut(duration: 1).delay(1), value: isAnimating)
@@ -113,7 +113,6 @@ struct OnboardingView: View {
                         .font(.system(.title3, design: .rounded))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                        .offset(x: 20)
                     
                     // 3. Capsule
                     
@@ -130,7 +129,7 @@ struct OnboardingView: View {
                             Circle()
                                 .fill(Color("ColorRed"))
                             Circle()
-                                .fill(.black.opacity(0.15))
+                                .fill(.black.opacity(0.1))
                                 .padding(8)
                             
                             Image(systemName: "chevron.right.2")

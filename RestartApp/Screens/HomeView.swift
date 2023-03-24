@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = false
     @State private var isAnimating: Bool = false
-    @State private var quoteText: String = "Deneme"
+    @State private var quoteText: String = ""
     let hapticFeedback = UINotificationFeedbackGenerator()
     var quotes: [QuoteItem] = testData
     
